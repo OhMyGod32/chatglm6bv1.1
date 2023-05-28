@@ -1,3 +1,4 @@
+CHCP 65001
 git add .
 git rm --cached 新建文本文档.bat
 git commit -m 新建文本文档.bat
