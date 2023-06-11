@@ -16,7 +16,7 @@ else:
     with open(chat_glm, 'w') as f:
         f.write(glm)
 tokenizer = AutoTokenizer.from_pretrained(".\\THUDM\\chatglm-6b", trust_remote_code=True)
-model = AutoModel.from_pretrained(".\\THUDM\\chatglm-6b", trust_remote_code=True).half().cuda()
+model = AutoModel.from_pretrained(".\\THUDM\\chatglm-6b", trust_remote_code=True).quantize(8).half().cuda()
 model = model.eval()
 
 """Override Chatbot.postprocess"""
